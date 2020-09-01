@@ -10,13 +10,13 @@ namespace CanIbuybeer
         {
             if (legg != "J")
                 return false;
-            if (age > 15 && location == "skolan")
-                return true;
             if (promille > 1.0m)
                 return false;
-            if (age > 17 && location == "krogen")
+            if (age > 15 && location == "Skolan")
                 return true;
-            if (age > 19 && location == "systemet")
+            if (age > 17 && location == "Krogen")
+                return true;
+            if (age > 19 && location == "Systemet")
                 return true;
             return false;
         }
@@ -30,45 +30,45 @@ namespace CanIbuybeer
             //bool 
             //string inmatning upper etc
 
-            Console.Write("Hur gammal är du:");
+            Console.Write("Hur gammal är du:?");
             int age = Convert.ToInt32(Console.ReadLine());
 
-            Console.Write("Location (systemet eller krogen):");
+            Console.Write("Location (Systemet eller Krogen?):");
             string location = Console.ReadLine();
             location = location.ToLower();
 
-            Console.Write("Har du legg med dig (J/N):");
+            Console.Write("Har du legg med dig (J/N)?");
             string legg = Console.ReadLine();
             Console.Write("Vilken promillehalt:");
             decimal promille = Convert.ToDecimal(Console.ReadLine());
 
-            bool canIBuyBeer = canibuybeer(age, location, promille, legg);
+            //bool canIBuyBeer = canibuybeer(age, location, promille, legg);
 
 
 
-            // bool Canibuybeer = false;
-            //if (legg == "J" && promille < 1.0m)
-            //  {
-            // if (location == "krogen" && age > 17)
-            //  {
-            //     Canibuybeer = true;
+             bool Canibuybeer = false;
+             if (legg == "J" && promille < 1.0m)
+              {
+             if (location == "krogen" && age > 17)
+              {
+                 Canibuybeer = true;
 
-            //  }
+              }
 
-            // else if (location == "systemet" && age > 19)
-            //  {
-            //   Canibuybeer = true;
+             else if (location == "systemet" && age > 19)
+              {
+               Canibuybeer = true;
 
-            //   }
-
-            // }
+               }
+                
+             }
 
 
 
             //    if (Canibuybeer == true)
-            if (canIBuyBeer)
+            if (Canibuybeer)
                 Console.WriteLine("Du får köpa öl");
-            else
+              else 
                 Console.WriteLine("Du får inte köpa öl");
            
 
