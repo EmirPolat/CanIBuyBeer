@@ -10,11 +10,13 @@ namespace CanIbuybeer
         static void Main(string[] args)
         {
 
-
+            Console.WriteLine("Superduper Beer Calculator 1.02");
+            //bool
+            // strin inmating upper etc
 
             Console.Write("Hur gammal är du:");
             int age = Convert.ToInt32(Console.ReadLine());
-            Console.Write("Location (Systemet eller krogen");
+            Console.Write("Location (Systemet eller krogen)");
             string legg = Console.ReadLine();
             Console.Write("Har du legg med dig (J/N):");
             string location = Console.ReadLine();
@@ -22,6 +24,7 @@ namespace CanIbuybeer
             decimal promille = Convert.ToDecimal(Console.ReadLine());
             location = location.ToLower();
 
+          
 
 
             bool Canibuybeer = false;
